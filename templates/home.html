@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>Student Performance prediction</h1>
+            <form action="{{url_for('predict_datapoint')}}" method="post">
+                <input type="text" name="Hours Studied" placeholder="Hours Studied" required="required" /><br>
+                <br>
+                <input type="text" name="Previous Scores" placeholder="Previous Scores" required="required" /><br>
+                <br>
+                <input type="text" name="Extracurricular Activities" placeholder="Extracurricular Activities" required="required" /><br>
+                <br>
+                
+                <input type="text" name="Sleep Hours" placeholder="Sleep Hours" required="required" /><br>
+                <br>
+                
+                <input type="text" name="Sample Question Papers Practiced" placeholder="Sample Question Papers Practiced" required="required" /><br>
+
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+
+            <h2>
+                Student performance is {{results}}
+            </h2>
+        </div>
+    </body>
+</html>
